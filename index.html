@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KinderFarms® Brand Command Center — v2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOAST CONTAINER -->
+  <div class="toast-container"></div>
+
+  <!-- SEARCH MODAL (Ctrl+K) -->
+  <div class="search-modal-backdrop" id="searchModal">
+    <div class="search-modal-window">
+      <div class="search-modal-input-row">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--kf-blue-light);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" class="search-modal-input" id="searchInput" placeholder="Search guidelines, colors, SKUs, tone, competitor specs... (Esc to close)">
+        <span class="kbd-shortcut">ESC</span>
+      </div>
+      <div class="search-modal-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <div class="app-container">
+
+    <!-- ── SIDEBAR NAVIGATION ── -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="#section-hero" class="sidebar-brand">
+          <div class="brand-icon-box">K</div>
+          <div>
+            <span class="brand-title">KinderFarms<span style="color: var(--kf-blue-light);">®</span></span>
+            <span class="brand-sub">Brand Command Center</span>
+          </div>
+        </a>
+        <div class="badge-version">
+          <span class="pulse-dot"></span>
+          <span>v2 · Of One Kind Redesign</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-group-title">01. Foundation & Heritage</div>
+        <a href="#section-story" class="nav-link"><span class="nav-icon">📖</span> Story & Manifesto</a>
+        <a href="#section-positioning" class="nav-link"><span class="nav-icon">🎯</span> Positioning Strategy</a>
+        
+        <div class="nav-group-title">02. Visual & Design Tokens</div>
+        <a href="#section-colors" class="nav-link"><span class="nav-icon">🎨</span> Color Token Engine</a>
+        <a href="#section-typography" class="nav-link"><span class="nav-icon">✍️</span> Typography Studio</a>
+        <a href="#section-brand-kit" class="nav-link"><span class="nav-icon">💎</span> Brand Kit & Logos</a>
+        <a href="#section-packaging" class="nav-link"><span class="nav-icon">📦</span> Packaging & Icons</a>
+        <a href="#section-components" class="nav-link"><span class="nav-icon">🧩</span> Component Library</a>
+        <a href="#section-tokens-spec" class="nav-link"><span class="nav-icon">📐</span> Token Contract Spec</a>
+
+        <div class="nav-group-title">03. Portfolio Architecture</div>
+        <a href="#section-architecture" class="nav-link"><span class="nav-icon">🏛️</span> Master Architecture</a>
+        <a href="#section-sub-brands" class="nav-link"><span class="nav-icon">🔄</span> Sub-Brand Migration</a>
+
+        <div class="nav-group-title">04. Market & Intelligence</div>
+        <a href="#section-competitors" class="nav-link"><span class="nav-icon">⚡</span> Competitor Radar</a>
+
+        <div class="nav-group-title">05. Voice, Copy & Governance</div>
+        <a href="#section-messaging" class="nav-link"><span class="nav-icon">💬</span> Messaging Framework</a>
+        <a href="#section-voice" class="nav-link"><span class="nav-icon">🎙️</span> Voice & Tone Matrix</a>
+        <a href="#section-guidelines" class="nav-link"><span class="nav-icon">🛡️</span> Brand Rules / Dos & Don'ts</a>
+        <a href="#section-vault" class="nav-link"><span class="nav-icon">💾</span> Asset Vault & Exporter</a>
+      </nav>
+    </aside>
+
+    <!-- ── MAIN CONTENT WRAPPER ── -->
+    <main class="main-wrapper">
+
+      <!-- TOP COMMAND BAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="search-trigger-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span>Search Command Center...</span>
+            <span class="kbd-shortcut">⌘K</span>
+          </button>
+        </div>
+        <div class="topbar-right">
+          <a href="#section-vault" class="btn-pill btn-ghost">Asset Vault</a>
+          <a href="#section-colors" class="btn-pill btn-primary">Design Tokens</a>
+        </div>
+      </header>
+
+      <div class="content-area">
+
+        <!-- ── HERO BANNER ── -->
+        <section class="hero-banner" id="section-hero">
+          <div class="hero-badge-row">
+            <span class="hero-tag">Unified Master Brand</span>
+            <span style="color: var(--kf-text-muted); font-size: 13px;">•</span>
+            <span style="color: var(--kf-text-secondary); font-size: 13px;">Single Monolithic Family Brand</span>
+          </div>
+          <h1 class="hero-title">Kids Deserve <span class="gradient-text">Less.</span></h1>
+          <p class="hero-sub">
+            The comprehensive brand constitution and operating system for <strong>KinderFarms®</strong>. 
+            Clean, calm, effective healthcare that removes the noise, artificial additives, and anxiety from parenting.
+          </p>
+
+          <div class="hero-stats-grid">
+            <div class="hero-stat-card">
+              <div class="hero-stat-val">0</div>
+              <div class="hero-stat-label">Artificial Dyes & Sucralose</div>
+            </div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-val">100%</div>
+              <div class="hero-stat-label">Monolithic Architecture</div>
+            </div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-val">WHO/AAP</div>
+              <div class="hero-stat-label">Electrolyte Standards</div>
+            </div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-val">1%</div>
+              <div class="hero-stat-label">For The Planet Certified</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION 01: STORY & MANIFESTO ── -->
+        <section class="brand-section" id="section-story">
+          <div class="section-head">
+            <span class="section-num-tag">01 · Foundation</span>
+            <h2 class="section-title">Brand Story & The 3am Manifesto</h2>
+            <p class="section-desc">Born from late-night pharmacy aisle frustration. Founded by Jeremy Adams and Jessica Biel to deliver clean, effective remedies without unnecessary additives.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card-glass accent-blue">
+              <div class="card-header-row">
+                <h3 class="card-title">The Late-Night Revelation</h3>
+                <span class="nav-tag">Origins</span>
+              </div>
+              <p style="color: var(--kf-text-secondary); margin-bottom: 16px; font-size: 15px;">
+                Like millions of parents, Jeremy Adams and Jessica Biel found themselves standing in the drugstore medicine aisle in the middle of the night, staring at children's remedies loaded with Red #40, Yellow #6, artificial sucralose, and chemical fillers.
+              </p>
+              <p style="color: var(--kf-text-secondary); font-size: 15px;">
+                When their children were ill, they wanted medicine that works without the junk. The status quo forced a compromise: either choose effective conventional medicine full of artificial additives, or unproven homeopathic remedies. <strong>KinderFarms was created to end that compromise.</strong>
+              </p>
+            </div>
+
+            <div class="card-glass accent-pink">
+              <div class="card-header-row">
+                <h3 class="card-title">The "Kids Deserve Less" Manifesto</h3>
+                <span class="nav-tag">Redesign 2026</span>
+              </div>
+              <blockquote style="font-family: var(--font-serif); font-size: 20px; line-height: 1.4; color: #fff; margin-bottom: 16px; border-left: 3px solid var(--kf-pink); padding-left: 16px;">
+                "Less noise. Less clutter. Less fear. Less artificial. Clean, calm, effective care that lets parents breathe."
+              </blockquote>
+              <p style="color: var(--kf-text-secondary); font-size: 14px;">
+                We don't shout over the medicine shelf. We calm it down. Every formula is physician-approved, backed by rigorous science, and formulated without artificial sweeteners or synthetic food dyes.
+              </p>
+            </div>
+          </div>
+
+          <div class="card-glass" style="margin-top: 24px;">
+            <div class="card-header-row" style="margin-bottom: 12px;">
+              <h3 class="card-title">As Featured In Tier-1 Press & Editorial</h3>
+              <span class="nav-tag">Media Recognition</span>
+            </div>
+            <div class="grid-3" style="gap: 16px; margin-top: 12px;">
+              <div style="background: rgba(0,0,0,0.3); padding: 16px; border-radius: 6px; border: 1px solid var(--kf-border-subtle);">
+                <img src="public/images/press/forbes.png" alt="Forbes" style="height: 20px; object-fit: contain; margin-bottom: 8px;" />
+                <p style="font-size: 13px; color: var(--kf-text-secondary); font-style: italic;">"We created KinderFarms because we believe no parent should ever have to choose between clean and effective."</p>
+                <span style="font-size: 11px; color: var(--kf-text-muted); font-family: var(--font-mono); display: block; margin-top: 8px;">— Jessica Biel, Co-Founder</span>
+              </div>
+              <div style="background: rgba(0,0,0,0.3); padding: 16px; border-radius: 6px; border: 1px solid var(--kf-border-subtle);">
+                <img src="public/images/press/parents.png" alt="Parents Magazine" style="height: 20px; object-fit: contain; margin-bottom: 8px;" />
+                <p style="font-size: 13px; color: var(--kf-text-secondary); font-style: italic;">"KinderFarms stands out by entirely avoiding artificial food coloring, using real fruit/vegetable juice for color."</p>
+                <span style="font-size: 11px; color: var(--kf-text-muted); font-family: var(--font-mono); display: block; margin-top: 8px;">— Parents Wellness Editors</span>
+              </div>
+              <div style="background: rgba(0,0,0,0.3); padding: 16px; border-radius: 6px; border: 1px solid var(--kf-border-subtle);">
+                <img src="public/images/press/she_knows.png" alt="She Knows" style="height: 20px; object-fit: contain; margin-bottom: 8px;" />
+                <p style="font-size: 13px; color: var(--kf-text-secondary); font-style: italic;">"Made with non-GMO dextrose designed to go directly to the bloodstream, unlike sucralose in Pedialyte."</p>
+                <span style="font-size: 11px; color: var(--kf-text-muted); font-family: var(--font-mono); display: block; margin-top: 8px;">— She Knows Clean Guide</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-glass" style="margin-top: 24px;">
+            <h3 class="card-title" style="margin-bottom: 14px;">1% For The Planet Commitment</h3>
+            <p style="color: var(--kf-text-secondary); font-size: 14.5px;">
+              KinderFarms donates 1% of all sales to environmental and humanitarian initiatives worldwide, ensuring that healthier kids grow up in a healthier world.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── SECTION 02: POSITIONING STRATEGY ── -->
+        <section class="brand-section" id="section-positioning">
+          <div class="section-head">
+            <span class="section-num-tag">02 · Strategy</span>
+            <h2 class="section-title">Brand Positioning & Perceptual Map</h2>
+            <p class="section-desc">The strategic evolution from "Clean-Label" to "Intentional Subtraction". Winning the intersection of Medical Efficacy and Pure Ingredients.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card-glass">
+              <h4 style="color: var(--kf-blue-light); font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Target Persona</h4>
+              <h3 style="font-size: 18px; margin-bottom: 10px; color: #fff;">The Mindful Millennial Parent</h3>
+              <p style="color: var(--kf-text-muted); font-size: 13.5px;">Ages 28–44. Reads ingredient labels first. Skeptical of legacy pharma packaging but refuses to gamble on homeopathic unproven alternatives.</p>
+            </div>
+            <div class="card-glass">
+              <h4 style="color: var(--kf-pink-light); font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Competitive Frame</h4>
+              <h3 style="font-size: 18px; margin-bottom: 10px; color: #fff;">The Clean Medical Authority</h3>
+              <p style="color: var(--kf-text-muted); font-size: 13.5px;">Directly challenges Pedialyte (Abbott), Children's Tylenol (Kenvue), and Genexa by combining proven active ingredients with zero artificial dyes or sucralose.</p>
+            </div>
+            <div class="card-glass">
+              <h4 style="color: var(--kf-lemonade); font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Core Thesis</h4>
+              <h3 style="font-size: 18px; margin-bottom: 10px; color: #fff;">Subtraction as Superiority</h3>
+              <p style="color: var(--kf-text-muted); font-size: 13.5px;">True brand luxury and medical efficacy is defined by what you have the courage to take out: no artificial dyes, no sucralose, no alarmist marketing.</p>
+            </div>
+          </div>
+
+          <!-- Perceptual Map Visualizer -->
+          <div class="perceptual-quadrant-box">
+            <div class="axis-x"></div>
+            <div class="axis-y"></div>
+            <span class="axis-label" style="top: 10px; left: 52%;">▲ High Medical Efficacy (WHO / AAP)</span>
+            <span class="axis-label" style="bottom: 10px; left: 52%;">▼ Homeopathic / Unregulated</span>
+            <span class="axis-label" style="top: 52%; right: 15px;">Clean Label / No Dyes ▶</span>
+            <span class="axis-label" style="top: 52%; left: 15px;">◀ Artificial Dyes & Sucralose</span>
+
+            <div class="quadrant-brand-node node-kf">
+              <span style="font-size: 16px;">★</span> KinderFarms® (Winning Quadrant)
+            </div>
+            <div class="quadrant-brand-node node-pedialyte">Pedialyte (High Efficacy, Artificial Dyes)</div>
+            <div class="quadrant-brand-node node-genexa">Genexa (Clean Label, Narrow Formats)</div>
+            <div class="quadrant-brand-node node-tylenol">Tylenol / Motrin (Legacy Pharma)</div>
+          </div>
+        </section>
+
+        <!-- ── SECTION 03: COLOR TOKEN ENGINE ── -->
+        <section class="brand-section" id="section-colors">
+          <div class="section-head">
+            <span class="section-num-tag">03 · Design System</span>
+            <h2 class="section-title">Color Palette & Token Engine</h2>
+            <p class="section-desc">Extracted from <code>kinderfarms-design-system.md</code> & <code>tokens.css</code>. Click any swatch to copy its HEX token to your clipboard.</p>
+          </div>
+
+          <h3 style="font-size: 18px; margin: 24px 0 16px; color: #fff;">Brand Identity & Primary Surfaces</h3>
+          <div class="grid-4">
+            <div class="swatch-box" data-hex="#D11994" data-name="Brand Pink" data-var="--kf-pink">
+              <div class="swatch-color" style="background: #D11994;"><span class="wcag-badge">AAA 4.7:1</span></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Brand Pink</div>
+                <div class="swatch-hex"><span>#D11994</span> <span>--accent</span></div>
+                <div class="swatch-role">Primary accent, primary CTAs, brand signature.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#1A6DFF" data-name="Kinder Blue" data-var="--kf-blue">
+              <div class="swatch-color" style="background: #1A6DFF;"><span class="wcag-badge">AAA 4.5:1</span></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Kinder Blue</div>
+                <div class="swatch-hex"><span>#1A6DFF</span> <span>--kf-blue</span></div>
+                <div class="swatch-role">Master brand confidence, medical trust, links.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#0E1320" data-name="Onyx" data-var="--kf-onyx">
+              <div class="swatch-color" style="background: #0E1320;"><span class="wcag-badge">AAA 18:1</span></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Onyx</div>
+                <div class="swatch-hex"><span>#0E1320</span> <span>--dark-header</span></div>
+                <div class="swatch-role">Header, footer, dark campaign blocks.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#171445" data-name="Deep Navy" data-var="--kf-deep-navy">
+              <div class="swatch-color" style="background: #171445;"><span class="wcag-badge">AAA 16:1</span></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Deep Navy</div>
+                <div class="swatch-hex"><span>#171445</span> <span>--fg</span></div>
+                <div class="swatch-role">Cookie dialogs, deep structural container text.</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size: 18px; margin: 32px 0 16px; color: #fff;">The 8-Flavor Seed Palette (v2 "Of One Kind")</h3>
+          <div class="grid-4">
+            <div class="swatch-box" data-hex="#E8416F" data-name="Strawberry Red" data-var="--kf-strawberry">
+              <div class="swatch-color" style="background: #E8416F;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Strawberry Red</div>
+                <div class="swatch-hex"><span>#E8416F</span> <span>--kf-strawberry</span></div>
+                <div class="swatch-role">Hero fruit accent, red-family hydration.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#D6443F" data-name="Cherry Red" data-var="--kf-cherry">
+              <div class="swatch-color" style="background: #D6443F;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Cherry Red</div>
+                <div class="swatch-hex"><span>#D6443F</span> <span>--kf-cherry</span></div>
+                <div class="swatch-role">Pain & fever medicine identity line.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#F27A1A" data-name="Citrus Orange" data-var="--kf-citrus-orange">
+              <div class="swatch-color" style="background: #F27A1A;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Citrus Orange</div>
+                <div class="swatch-hex"><span>#F27A1A</span> <span>--kf-citrus-orange</span></div>
+                <div class="swatch-role">Orange hydration, daytime energy.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#F2C14E" data-name="Lemon Yellow" data-var="--kf-lemon">
+              <div class="swatch-color" style="background: #F2C14E;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Lemon Yellow</div>
+                <div class="swatch-hex"><span>#F2C14E</span> <span>--kf-lemon</span></div>
+                <div class="swatch-role">Lemonade reset, brightness.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#8B5CBF" data-name="Berry Purple" data-var="--kf-berry-purple">
+              <div class="swatch-color" style="background: #8B5CBF;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Berry Purple</div>
+                <div class="swatch-hex"><span>#8B5CBF</span> <span>--kf-berry-purple</span></div>
+                <div class="swatch-role">Mixed berry hydration, nighttime calm.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#C13584" data-name="Raspberry Accent" data-var="--kf-raspberry">
+              <div class="swatch-color" style="background: #C13584;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Raspberry</div>
+                <div class="swatch-hex"><span>#C13584</span> <span>--kf-raspberry</span></div>
+                <div class="swatch-role">Advanced / PLUS hydration line accent.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#F57E9E" data-name="Watermelon Pink" data-var="--kf-watermelon-pink">
+              <div class="swatch-color" style="background: #F57E9E;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Watermelon Pink</div>
+                <div class="swatch-hex"><span>#F57E9E</span> <span>--kf-watermelon-pink</span></div>
+                <div class="swatch-role">Watermelon play, summer refreshment.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#F0A93B" data-name="Tropical Punch" data-var="--kf-tropical">
+              <div class="swatch-color" style="background: #F0A93B;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Tropical Punch</div>
+                <div class="swatch-hex"><span>#F0A93B</span> <span>--kf-tropical</span></div>
+                <div class="swatch-role">Multi-flavor variety & family packs.</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size: 18px; margin: 32px 0 16px; color: #fff;">Surfaces, Neutrals & Trust Tokens</h3>
+          <div class="grid-4">
+            <div class="swatch-box" data-hex="#F9F7F4" data-name="Warm Porcelain" data-var="--kf-porcelain">
+              <div class="swatch-color" style="background: #F9F7F4; border-bottom: 1px solid #ECECEC;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Warm Porcelain</div>
+                <div class="swatch-hex"><span>#F9F7F4</span> <span>--kf-porcelain</span></div>
+                <div class="swatch-role">Warm off-white section background.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#444749" data-name="Coal Body" data-var="--kf-coal">
+              <div class="swatch-color" style="background: #444749;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Coal</div>
+                <div class="swatch-hex"><span>#444749</span> <span>--fg</span></div>
+                <div class="swatch-role">Body text on light surfaces.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#3E9B57" data-name="Leaf Green" data-var="--kf-leaf">
+              <div class="swatch-color" style="background: #3E9B57;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Leaf Green</div>
+                <div class="swatch-hex"><span>#3E9B57</span> <span>--kf-leaf</span></div>
+                <div class="swatch-role">Non-GMO seal, clean label trust badge.</div>
+              </div>
+            </div>
+
+            <div class="swatch-box" data-hex="#ECECEC" data-name="Gallery Gray" data-var="--kf-gallery">
+              <div class="swatch-color" style="background: #ECECEC;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Gallery Gray</div>
+                <div class="swatch-hex"><span>#ECECEC</span> <span>--border</span></div>
+                <div class="swatch-role">Dividers, input outlines, cards.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION 04: TYPOGRAPHY STUDIO ── -->
+        <section class="brand-section" id="section-typography">
+          <div class="section-head">
+            <span class="section-num-tag">04 · Typography</span>
+            <h2 class="section-title">Typography & Live Specimen Studio</h2>
+            <p class="section-desc">Editorial authority meets clean UI precision. <strong>Tropiline Bold</strong> for headlines and editorial manifestos, paired with <strong>Montserrat</strong> for functional hierarchy.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card-glass">
+              <span class="nav-tag" style="margin-bottom: 12px; display: inline-block;">Primary Display Serif</span>
+              <h3 style="font-family: var(--font-serif); font-size: 38px; color: #fff; margin-bottom: 8px;">Tropiline Bold</h3>
+              <p style="color: var(--kf-text-secondary); font-size: 14px;">Used for all high-impact headlines, packaging title fronts, campaign manifestos, and emotional parent quotes. Warm, editorial, non-clinical.</p>
+            </div>
+
+            <div class="card-glass">
+              <span class="nav-tag" style="margin-bottom: 12px; display: inline-block;">Body & Interface Sans</span>
+              <h3 style="font-family: var(--font-sans); font-size: 34px; font-weight: 800; color: #fff; margin-bottom: 8px;">Montserrat</h3>
+              <p style="color: var(--kf-text-secondary); font-size: 14px;">Geometric, highly legible, modern sans-serif. Used for dosing instructions, product ingredient tables, body text, and digital UI.</p>
+            </div>
+          </div>
+
+          <!-- Interactive Sandbox -->
+          <div class="specimen-sandbox">
+            <div class="sandbox-controls">
+              <div class="control-group" style="flex: 2; min-width: 260px;">
+                <span class="control-label">Live Text:</span>
+                <input type="text" id="typeSandboxInput" class="sandbox-input" value="Kids Deserve Less. Clean, kind, effective care.">
+              </div>
+              <div class="control-group">
+                <span class="control-label">Font:</span>
+                <select id="typeFontSelect" class="sandbox-input" style="width: 140px; cursor: pointer;">
+                  <option value="serif">Tropiline Serif</option>
+                  <option value="sans">Montserrat Sans</option>
+                </select>
+              </div>
+              <div class="control-group">
+                <span class="control-label">Size (<span id="typeSizeValue">38px</span>):</span>
+                <input type="range" id="typeSizeSlider" min="16" max="72" value="38" style="width: 120px; cursor: pointer;">
+              </div>
+            </div>
+
+            <div class="specimen-preview-box">
+              <div id="typeSandboxPreview" style="font-family: var(--font-serif); font-size: 38px; color: #fff; text-align: center;">
+                Kids Deserve Less. Clean, kind, effective care.
+              </div>
+            </div>
+          </div>
+
+          <!-- Type Scale Matrix -->
+          <div style="margin-top: 36px;">
+            <h3 style="font-size: 18px; color: #fff; margin-bottom: 16px;">Standard Typographic Scale</h3>
+            <div class="type-scale-row">
+              <span class="type-token-tag">Display 1 (72px / 1.05)</span>
+              <div style="font-family: var(--font-serif); font-size: 36px; color: #fff;">Kids Deserve Less.</div>
+              <span style="color: var(--kf-text-muted); font-size: 12px;">Tropiline Bold · Hero Heads</span>
+            </div>
+            <div class="type-scale-row">
+              <span class="type-token-tag">Headline 2 (34px / 1.2)</span>
+              <div style="font-family: var(--font-sans); font-size: 24px; font-weight: 800; color: #fff;">Medical Grade Hydration</div>
+              <span style="color: var(--kf-text-muted); font-size: 12px;">Montserrat · Section Heads</span>
+            </div>
+            <div class="type-scale-row">
+              <span class="type-token-tag">Body Regular (16px / 1.6)</span>
+              <div style="font-size: 15px; color: var(--kf-text-secondary);">Formulated to WHO and AAP oral rehydration solution standards.</div>
+              <span style="color: var(--kf-text-muted); font-size: 12px;">Montserrat 400 · Paragraphs</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION: BRAND KIT & LOGOS ── -->
+        <section class="brand-section" id="section-brand-kit">
+          <div class="section-head">
+            <span class="section-num-tag">04B · Brand Kit</span>
+            <h2 class="section-title">Brand Kit & Master Logotype</h2>
+            <p class="section-desc">The primary visual identifier for KinderFarms®. Clean, bold, and anchored in parental confidence.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card-glass accent-blue">
+              <div class="card-header-row">
+                <h3 class="card-title">Primary Logotype Lockup</h3>
+                <span class="nav-tag">Master Vector</span>
+              </div>
+              <div style="background: rgba(0,0,0,0.4); border-radius: var(--kf-radius-md); padding: 36px; text-align: center; margin-bottom: 16px; border: 1px dashed var(--kf-border-subtle); display: flex; align-items: center; justify-content: center;">
+                <img src="public/images/logos/logo-blue.svg" alt="KinderFarms Master Logo" style="height: 48px; max-width: 260px; object-contain; filter: brightness(0) invert(1);" />
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <button class="btn-pill btn-ghost" data-copy='<img src="/images/logos/logo-blue.svg" alt="KinderFarms" width="220" />' style="flex: 1; justify-content: center;">Copy Logo HTML</button>
+                <a href="public/images/logos/logo-blue.svg" download="KinderFarms_Logo.svg" class="btn-pill btn-primary" style="flex: 1; justify-content: center; text-decoration: none;">Download SVG</a>
+              </div>
+            </div>
+
+            <div class="card-glass">
+              <div class="card-header-row">
+                <h3 class="card-title">Clear Space & Construction</h3>
+                <span class="nav-tag">Safety Zone</span>
+              </div>
+              <p style="color: var(--kf-text-secondary); font-size: 14px; margin-bottom: 16px;">
+                The minimum clear space around the logotype must equal the height of the capital letter <strong>"K"</strong> on all four sides. No text, icons, or visual clutter may infringe upon this exclusion zone.
+              </p>
+              <div style="background: rgba(26,109,255,0.06); border: 1px dashed var(--kf-blue); border-radius: var(--kf-radius-sm); padding: 14px; font-family: var(--font-mono); font-size: 12px; color: var(--kf-blue-light);">
+                Exclusion Zone: 1X (X = Height of capital "K")
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION: PACKAGING & ICONS ── -->
+        <section class="brand-section" id="section-packaging">
+          <div class="section-head">
+            <span class="section-num-tag">04C · Packaging Standards</span>
+            <h2 class="section-title">Clean-Label Iconography & Packaging Blueprint</h2>
+            <p class="section-desc">Certified badge system and front-of-pack architectural guidelines ensuring instant shopper comprehension in the aisle.</p>
+          </div>
+
+          <div class="grid-4">
+            <div class="card-glass" style="text-align: center;">
+              <div style="height: 48px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center;">
+                <img src="public/images/badges/icon-no-artificial-dyes.png" alt="No Artificial Dyes" style="height: 40px; object-fit: contain;" />
+              </div>
+              <h4 style="font-size: 15px; color: #fff; margin-bottom: 4px;">Zero Artificial Dyes</h4>
+              <p style="font-size: 12px; color: var(--kf-text-muted);">No Red #40, Yellow #6, or Blue #1</p>
+            </div>
+            <div class="card-glass" style="text-align: center;">
+              <div style="height: 48px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center;">
+                <img src="public/images/badges/icon-no-sweetener.png" alt="Zero Sucralose" style="height: 40px; object-fit: contain;" />
+              </div>
+              <h4 style="font-size: 15px; color: #fff; margin-bottom: 4px;">Zero Sucralose</h4>
+              <p style="font-size: 12px; color: var(--kf-text-muted);">No artificial sweeteners or Ace-K</p>
+            </div>
+            <div class="card-glass" style="text-align: center;">
+              <div style="height: 48px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center;">
+                <img src="public/images/badges/badge-non-gmo-verified.png" alt="Non-GMO Verified" style="height: 40px; object-fit: contain;" />
+              </div>
+              <h4 style="font-size: 15px; color: #fff; margin-bottom: 4px;">Non-GMO Verified</h4>
+              <p style="font-size: 12px; color: var(--kf-text-muted);">Certified non-GMO botanicals</p>
+            </div>
+            <div class="card-glass" style="text-align: center;">
+              <div style="height: 48px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center;">
+                <img src="public/images/badges/icon-kosher.png" alt="1% For The Planet" style="height: 40px; object-fit: contain;" />
+              </div>
+              <h4 style="font-size: 15px; color: #fff; margin-bottom: 4px;">1% For The Planet</h4>
+              <p style="font-size: 12px; color: var(--kf-text-muted);">Certified global giving partnership</p>
+            </div>
+          </div>
+
+          <!-- Retail Shelf Omnichannel Brand Block -->
+          <div class="card-glass" style="margin-top: 24px;">
+            <div class="card-header-row" style="margin-bottom: 12px;">
+              <h3 class="card-title">Omnichannel Retail Distribution Brand Block</h3>
+              <span class="nav-tag">Nationwide Shelf Presence</span>
+            </div>
+            <div class="grid-4" style="gap: 12px; margin-top: 12px;">
+              <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 6px; border: 1px solid var(--kf-border-subtle); display: flex; flex-col; align-items: center; text-align: center;">
+                <img src="public/images/retailers/walmart.svg" alt="Walmart" style="height: 24px; object-fit: contain; margin-bottom: 6px;" />
+                <span style="font-size: 11px; font-family: var(--font-mono); color: var(--kf-blue-light); font-weight: 700;">4,600+ Stores</span>
+              </div>
+              <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 6px; border: 1px solid var(--kf-border-subtle); display: flex; flex-col; align-items: center; text-align: center;">
+                <img src="public/images/retailers/target.svg" alt="Target" style="height: 24px; object-fit: contain; margin-bottom: 6px;" />
+                <span style="font-size: 11px; font-family: var(--font-mono); color: var(--kf-blue-light); font-weight: 700;">1,950+ Stores</span>
+              </div>
+              <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 6px; border: 1px solid var(--kf-border-subtle); display: flex; flex-col; align-items: center; text-align: center;">
+                <img src="public/images/retailers/cvs.svg" alt="CVS" style="height: 24px; object-fit: contain; margin-bottom: 6px;" />
+                <span style="font-size: 11px; font-family: var(--font-mono); color: var(--kf-blue-light); font-weight: 700;">7,200+ Stores</span>
+              </div>
+              <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 6px; border: 1px solid var(--kf-border-subtle); display: flex; flex-col; align-items: center; text-align: center;">
+                <img src="public/images/retailers/walgreens.svg" alt="Walgreens" style="height: 24px; object-fit: contain; margin-bottom: 6px;" />
+                <span style="font-size: 11px; font-family: var(--font-mono); color: var(--kf-blue-light); font-weight: 700;">8,800+ Stores</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION: COMPONENT LIBRARY & SHOWCASE ── -->
+        <section class="brand-section" id="section-components">
+          <div class="section-head">
+            <span class="section-num-tag">04D · Component Library</span>
+            <h2 class="section-title">UI Component Library & Pattern Showcase</h2>
+            <p class="section-desc">Extracted from <code>components.html</code> & <code>design-system.html</code>. Production-ready button primitives, badges, interactive search pills, and card patterns.</p>
+          </div>
+
+          <div class="grid-2">
+            <!-- Master Brand Buttons -->
+            <div class="component-demo-card">
+              <div class="card-header-row">
+                <h4 style="color: #fff; font-size: 16px;">Primary Master Buttons (55px)</h4>
+                <span class="nav-tag">--button_height: 55px</span>
+              </div>
+              <p style="color: var(--kf-text-muted); font-size: 13px;">Extracted directly from production CSS. High-contrast, bold 500-weight typography with 4px border radius.</p>
+              
+              <div class="component-preview-stage">
+                <button class="kf-btn-master pink" data-copy='<button class="btn btn-accent">Shop Hydration</button>'>Shop Hydration</button>
+                <button class="kf-btn-master dark" data-copy='<button class="btn btn-dark">Learn More</button>'>Learn More</button>
+                <button class="kf-btn-master ghost" data-copy='<button class="btn btn-ghost">Find In Store</button>'>Find In Store</button>
+              </div>
+            </div>
+
+            <!-- Pill Action Buttons & Search -->
+            <div class="component-demo-card">
+              <div class="card-header-row">
+                <h4 style="color: #fff; font-size: 16px;">Pill Action Buttons & Search Controls</h4>
+                <span class="nav-tag">--radius-pill: 9999px</span>
+              </div>
+              <p style="color: var(--kf-text-muted); font-size: 13px;">Used in the sticky header, category filters, quick sign-in triggers, and navigation ribbons.</p>
+              
+              <div class="component-preview-stage dark-stage">
+                <button class="kf-btn-pill-action" data-copy='<button class="btn-pill">Sign In</button>'>Sign In</button>
+                <button class="kf-btn-pill-action kf-pill-light" data-copy='<button class="btn-pill btn-pill-dark">All Flavors (8)</button>'>All Flavors (8)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clean Label Badge & Trust Stamps -->
+          <div class="component-demo-card" style="margin-top: 24px;">
+            <div class="card-header-row">
+              <h4 style="color: #fff; font-size: 16px;">Clean-Label Trust Badges & Stamp Components</h4>
+              <span class="nav-tag">Shelf-to-Cart Conversion</span>
+            </div>
+            <p style="color: var(--kf-text-muted); font-size: 13px;">Instant shopper comprehension badges rendered on white or porcelain surfaces with <code>--kf-leaf</code> green trust affirmations.</p>
+
+            <div class="component-preview-stage sand-stage" style="justify-content: space-around;">
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; padding: 10px 18px; border-radius: 9999px; border: 1px solid #ECECEC; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <span style="color: #3E9B57; font-weight: 800; font-size: 16px;">✓</span>
+                <span style="font-size: 14px; font-weight: 700; color: #171445;">0% Artificial Dyes</span>
+              </div>
+
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; padding: 10px 18px; border-radius: 9999px; border: 1px solid #ECECEC; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <span style="color: #3E9B57; font-weight: 800; font-size: 16px;">✓</span>
+                <span style="font-size: 14px; font-weight: 700; color: #171445;">0% Sucralose</span>
+              </div>
+
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; padding: 10px 18px; border-radius: 9999px; border: 1px solid #ECECEC; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <span style="color: #146FF8; font-weight: 800; font-size: 16px;">★</span>
+                <span style="font-size: 14px; font-weight: 700; color: #171445;">WHO / AAP Compliant</span>
+              </div>
+
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; padding: 10px 18px; border-radius: 9999px; border: 1px solid #ECECEC; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <span style="color: #D11994; font-weight: 800; font-size: 16px;">♥</span>
+                <span style="font-size: 14px; font-weight: 700; color: #171445;">1% For The Planet</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION: TOKEN CONTRACT & LAYOUT SPEC ── -->
+        <section class="brand-section" id="section-tokens-spec">
+          <div class="section-head">
+            <span class="section-num-tag">04E · Token Contract</span>
+            <h2 class="section-title">Design Token Contract & Dimension Spec</h2>
+            <p class="section-desc">Extracted from <code>design-tokens.json</code> & <code>tailwind-v4.css</code>. Full token inventory with layer classifications and layout constants.</p>
+          </div>
+
+          <div class="grid-3" style="margin-bottom: 24px;">
+            <div class="card-glass">
+              <h4 style="color: var(--kf-blue-light); font-size: 12px; font-weight: 700; text-transform: uppercase;">Max Container</h4>
+              <div style="font-size: 28px; font-weight: 800; color: #fff; margin: 8px 0 4px;">1600px</div>
+              <p style="font-size: 12px; color: var(--kf-text-muted);"><code>--container-max</code> · Wide viewport content ceiling</p>
+            </div>
+            <div class="card-glass">
+              <h4 style="color: var(--kf-pink-light); font-size: 12px; font-weight: 700; text-transform: uppercase;">Button Height</h4>
+              <div style="font-size: 28px; font-weight: 800; color: #fff; margin: 8px 0 4px;">55px</div>
+              <p style="font-size: 12px; color: var(--kf-text-muted);"><code>--btn-height</code> · Standard touch target</p>
+            </div>
+            <div class="card-glass">
+              <h4 style="color: var(--kf-lemon); font-size: 12px; font-weight: 700; text-transform: uppercase;">Corner Radius</h4>
+              <div style="font-size: 28px; font-weight: 800; color: #fff; margin: 8px 0 4px;">4px / Pill</div>
+              <p style="font-size: 12px; color: var(--kf-text-muted);"><code>--btn-radius / --radius-pill</code> · Subtle rounding</p>
+            </div>
+          </div>
+
+          <div class="matrix-table-container">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>Token Variable</th>
+                  <th>Value</th>
+                  <th>Type</th>
+                  <th>Token Layer</th>
+                  <th>Confidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>--bg</code></td><td><code>#FFFFFF</code></td><td>Color</td><td>A1-structure</td><td><span class="nav-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">High</span></td></tr>
+                <tr><td><code>--accent</code></td><td><code>#D11994</code></td><td>Color</td><td>A1-identity</td><td><span class="nav-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">High</span></td></tr>
+                <tr><td><code>--dark-header</code></td><td><code>#0E1320</code></td><td>Color</td><td>A1-identity</td><td><span class="nav-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">High</span></td></tr>
+                <tr><td><code>--surface</code></td><td><code>#F6F6F6</code></td><td>Color</td><td>A1-structure</td><td><span class="nav-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">High</span></td></tr>
+                <tr><td><code>--fg</code></td><td><code>#444749</code></td><td>Color</td><td>A1-structure</td><td><span class="nav-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">High</span></td></tr>
+                <tr><td><code>--font-secondary</code></td><td><code>Tropiline Bold</code></td><td>FontFamily</td><td>A1-identity</td><td><span class="nav-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">High</span></td></tr>
+                <tr><td><code>--font-primary</code></td><td><code>Montserrat</code></td><td>FontFamily</td><td>A1-identity</td><td><span class="nav-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">High</span></td></tr>
+                <tr><td><code>--container-max</code></td><td><code>1600px</code></td><td>Dimension</td><td>A1-structure</td><td><span class="nav-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">High</span></td></tr>
+                <tr><td><code>--btn-height</code></td><td><code>55px</code></td><td>Dimension</td><td>A2</td><td><span class="nav-tag" style="background: rgba(16,185,129,0.15); color: #10b981;">High</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ── SECTION 05: BRAND ARCHITECTURE ── -->
+        <section class="brand-section" id="section-architecture">
+          <div class="section-head">
+            <span class="section-num-tag">05 · Architecture</span>
+            <h2 class="section-title">Master Brand Architecture & SKU Portfolio</h2>
+            <p class="section-desc">Unified Monolithic Master Brand architecture. The entire product catalog is organized into two distinct functional verticals.</p>
+          </div>
+
+          <div class="vertical-selector-bar">
+            <button class="vertical-tab active" data-filter="all">All Products</button>
+            <button class="vertical-tab" data-filter="hydration">Hydration Vertical</button>
+            <button class="vertical-tab" data-filter="medicine">Medicine & Supplements</button>
+          </div>
+
+          <div class="grid-3" id="skuGrid">
+            <!-- Hydration SKUs -->
+            <div class="sku-card" data-category="hydration">
+              <span class="sku-badge hydration">Hydration · Ready-To-Drink</span>
+              <h4 style="font-size: 17px; color: #fff; margin-bottom: 6px;">KinderFarms Hydration (RTD)</h4>
+              <p style="font-size: 13px; color: var(--kf-text-muted); margin-bottom: 12px;">1L Bottles · Fruit Punch, Strawberry, Orange, Berry</p>
+              <div style="font-size: 12px; color: var(--kf-text-secondary); background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px;">
+                ✓ WHO/AAP ORS Standard · Zero Artificial Dyes · Dextrose base
+              </div>
+            </div>
+
+            <div class="sku-card" data-category="hydration">
+              <span class="sku-badge hydration">Hydration · Stick Packs</span>
+              <h4 style="font-size: 17px; color: #fff; margin-bottom: 6px;">Hydration Powder Sticks</h4>
+              <p style="font-size: 13px; color: var(--kf-text-muted); margin-bottom: 12px;">16-Count & 30-Count Multipacks · Travel & Sports</p>
+              <div style="font-size: 12px; color: var(--kf-text-secondary); background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px;">
+                ✓ Rapid dissolution · No Sucralose · Natural fruit flavor
+              </div>
+            </div>
+
+            <div class="sku-card" data-category="hydration">
+              <span class="sku-badge hydration">Hydration · Bulk Powder</span>
+              <h4 style="font-size: 17px; color: #fff; margin-bottom: 6px;">Hydration Family Pouch</h4>
+              <p style="font-size: 13px; color: var(--kf-text-muted); margin-bottom: 12px;">30-Serving Resealable Pouch · Lemonade & Berry</p>
+              <div style="font-size: 12px; color: var(--kf-text-secondary); background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px;">
+                ✓ Eco-friendly format · Cost per serving optimization
+              </div>
+            </div>
+
+            <!-- Medicine SKUs -->
+            <div class="sku-card" data-category="medicine">
+              <span class="sku-badge medicine">Medicine · Fever & Pain</span>
+              <h4 style="font-size: 17px; color: #fff; margin-bottom: 6px;">Infants' & Children's Pain & Fever</h4>
+              <p style="font-size: 13px; color: var(--kf-text-muted); margin-bottom: 12px;">Acetaminophen 160mg / 5mL · Organic Cherry</p>
+              <div style="font-size: 12px; color: var(--kf-text-secondary); background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px;">
+                ✓ Dye-free clear syrup · Paraben-free · Accurate dosing syringe
+              </div>
+            </div>
+
+            <div class="sku-card" data-category="medicine">
+              <span class="sku-badge medicine">Medicine · Cough & Cold</span>
+              <h4 style="font-size: 17px; color: #fff; margin-bottom: 6px;">Cough & Congestion Syrup</h4>
+              <p style="font-size: 13px; color: var(--kf-text-muted); margin-bottom: 12px;">Dextromethorphan + Guaifenesin · Berry</p>
+              <div style="font-size: 12px; color: var(--kf-text-secondary); background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px;">
+                ✓ Proven active OTC ingredients · Organic agave base · No Red 40
+              </div>
+            </div>
+
+            <div class="sku-card" data-category="medicine">
+              <span class="sku-badge medicine">Medicine · Nighttime</span>
+              <h4 style="font-size: 17px; color: #fff; margin-bottom: 6px;">Nighttime Cough & Cold</h4>
+              <p style="font-size: 13px; color: var(--kf-text-muted); margin-bottom: 12px;">Diphenhydramine HCl · Organic Mixed Berry</p>
+              <div style="font-size: 12px; color: var(--kf-text-secondary); background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px;">
+                ✓ Calming bedtime formula · Zero artificial dyes or parabens
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION 06: SUB-BRAND MIGRATION LOOKUP ── -->
+        <section class="brand-section" id="section-sub-brands">
+          <div class="section-head">
+            <span class="section-num-tag">06 · Migration</span>
+            <h2 class="section-title">Sub-Brand Retirement & Translation Guide</h2>
+            <p class="section-desc">Legacy sub-brands (KinderLyte, KinderMed, KinderSprout) are officially <strong>RETIRED</strong>. Use this interactive tool to find current unified KinderFarms product equivalents.</p>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <input type="text" id="subBrandSearch" class="sandbox-input" placeholder="🔍 Type legacy brand name (e.g. 'KinderMed', 'KinderLyte', 'KinderSprout', 'Cherry Cough')...">
+          </div>
+
+          <div class="matrix-table-container">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>Legacy Sub-Brand SKU</th>
+                  <th>Status</th>
+                  <th>New Unified Master Brand SKU</th>
+                  <th>Key Packaging Change</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="migration-row">
+                  <td style="font-weight: 700; color: #ffa4d8;">KinderMed® Infants' Pain & Fever</td>
+                  <td><span class="nav-tag" style="background: rgba(239,68,68,0.2); color: #f87171;">RETIRED</span></td>
+                  <td style="font-weight: 700; color: #82b1ff;">KinderFarms® Infants' Pain & Fever</td>
+                  <td>Drop sub-brand badge; feature bold monolithic KinderFarms wordmark & clear-liquid callout.</td>
+                </tr>
+                <tr class="migration-row">
+                  <td style="font-weight: 700; color: #ffa4d8;">KinderMed® Kids' Cough & Congestion</td>
+                  <td><span class="nav-tag" style="background: rgba(239,68,68,0.2); color: #f87171;">RETIRED</span></td>
+                  <td style="font-weight: 700; color: #82b1ff;">KinderFarms® Kids' Cough & Congestion</td>
+                  <td>Eliminate pharmaceutical clutter; clean navy-and-berry color-blocked bottle.</td>
+                </tr>
+                <tr class="migration-row">
+                  <td style="font-weight: 700; color: #82b1ff;">KinderLyte® Oral Electrolyte Solution</td>
+                  <td><span class="nav-tag" style="background: rgba(239,68,68,0.2); color: #f87171;">RETIRED</span></td>
+                  <td style="font-weight: 700; color: #82b1ff;">KinderFarms® Hydration (Ready-to-Drink)</td>
+                  <td>Monolithic branding; bold flavor strip and clean-label icons on front panel.</td>
+                </tr>
+                <tr class="migration-row">
+                  <td style="font-weight: 700; color: #82b1ff;">KinderLyte PLUS® Hydration Powder</td>
+                  <td><span class="nav-tag" style="background: rgba(239,68,68,0.2); color: #f87171;">RETIRED</span></td>
+                  <td style="font-weight: 700; color: #82b1ff;">KinderFarms® Hydration Stick Packs</td>
+                  <td>Replaced PLUS naming with clear functional serving callout and non-GMO seal.</td>
+                </tr>
+                <tr class="migration-row">
+                  <td style="font-weight: 700; color: #10b981;">KinderSprout® Plant Nutrition Shake</td>
+                  <td><span class="nav-tag" style="background: rgba(239,68,68,0.2); color: #f87171;">RETIRED</span></td>
+                  <td style="font-weight: 700; color: #82b1ff;">KinderFarms® Kids' Plant Nutrition</td>
+                  <td>Transitioned into KinderFarms nutrition vertical under unified parent architecture.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ── SECTION 07: COMPETITOR RADAR ── -->
+        <section class="brand-section" id="section-competitors">
+          <div class="section-head">
+            <span class="section-num-tag">07 · Market Intelligence</span>
+            <h2 class="section-title">Competitor Intelligence & Battle Matrix</h2>
+            <p class="section-desc">Head-to-head comparison across oral rehydration and OTC pediatric medicine. Filter to compare KinderFarms directly against category incumbents.</p>
+          </div>
+
+          <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
+            <button class="btn-pill btn-primary comp-filter-btn active" data-competitor="all">All Competitors</button>
+            <button class="btn-pill btn-ghost comp-filter-btn" data-competitor="pedialyte">vs Pedialyte</button>
+            <button class="btn-pill btn-ghost comp-filter-btn" data-competitor="genexa">vs Genexa</button>
+            <button class="btn-pill btn-ghost comp-filter-btn" data-competitor="tylenol">vs Tylenol / Motrin</button>
+            <button class="btn-pill btn-ghost comp-filter-btn" data-competitor="liquidiv">vs Liquid I.V.</button>
+          </div>
+
+          <div class="matrix-table-container">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>Brand / Product</th>
+                  <th>Artificial Dyes</th>
+                  <th>Artificial Sweeteners</th>
+                  <th>Electrolyte Ratio</th>
+                  <th>Active Ingredient Efficacy</th>
+                  <th>1% For The Planet</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="matrix-row highlight-kf" data-brand="kinderfarms">
+                  <td>⭐ KinderFarms® (Ours)</td>
+                  <td><span style="color: var(--kf-success); font-weight: 700;">NONE (0%)</span></td>
+                  <td><span style="color: var(--kf-success); font-weight: 700;">NONE (0% Sucralose)</span></td>
+                  <td>WHO/AAP Compliant ORS</td>
+                  <td>Proven Active OTC (Acetaminophen, etc.)</td>
+                  <td><span style="color: var(--kf-success); font-weight: 700;">YES (Certified)</span></td>
+                </tr>
+                <tr class="matrix-row" data-brand="pedialyte">
+                  <td>Pedialyte (Abbott)</td>
+                  <td><span style="color: var(--kf-error);">Red #40, Blue #1, Yellow #6</span></td>
+                  <td><span style="color: var(--kf-error);">Contains Sucralose / Acesulfame-K</span></td>
+                  <td>Medical Grade ORS</td>
+                  <td>N/A (Hydration Only)</td>
+                  <td>No</td>
+                </tr>
+                <tr class="matrix-row" data-brand="genexa">
+                  <td>Genexa</td>
+                  <td><span style="color: var(--kf-success);">None</span></td>
+                  <td><span style="color: var(--kf-success);">None</span></td>
+                  <td>No Medical ORS Line</td>
+                  <td>Proven Active OTC</td>
+                  <td>No</td>
+                </tr>
+                <tr class="matrix-row" data-brand="tylenol">
+                  <td>Children's Tylenol (Kenvue)</td>
+                  <td><span style="color: var(--kf-error);">Red #33, Red #40</span></td>
+                  <td><span style="color: var(--kf-error);">Sucralose, High-Fructose Corn Syrup</span></td>
+                  <td>N/A</td>
+                  <td>Proven Active OTC</td>
+                  <td>No</td>
+                </tr>
+                <tr class="matrix-row" data-brand="liquidiv">
+                  <td>Liquid I.V. (Unilever)</td>
+                  <td>None</td>
+                  <td>Contains Stevia (High Sodium profile)</td>
+                  <td>Adult CTT formula (High Sugar 11g)</td>
+                  <td>N/A (Hydration Only)</td>
+                  <td>No (Donation matching only)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ── SECTION 08: MESSAGING FRAMEWORK ── -->
+        <section class="brand-section" id="section-messaging">
+          <div class="section-head">
+            <span class="section-num-tag">08 · Messaging</span>
+            <h2 class="section-title">Messaging Framework & Persona Playbook</h2>
+            <p class="section-desc">Approved value propositions, taglines, elevator pitches, and proof points tailored by audience segment.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card-glass accent-blue">
+              <span class="nav-tag" style="margin-bottom: 12px; display: inline-block;">Parents & Caregivers</span>
+              <h3 style="font-size: 19px; color: #fff; margin-bottom: 10px;">"Clean relief without the compromise."</h3>
+              <p style="color: var(--kf-text-secondary); font-size: 13.5px; margin-bottom: 16px;">
+                "When your child is sick at 3am, you want medicine that works without artificial dyes or sucralose. KinderFarms delivers the active ingredients doctors recommend with nothing unnecessary."
+              </p>
+              <button class="btn-pill btn-ghost" data-copy="When your child is sick at 3am, you want medicine that works without artificial dyes or sucralose. KinderFarms delivers the active ingredients doctors recommend with nothing unnecessary." style="width: 100%; justify-content: center;">Copy Pitch</button>
+            </div>
+
+            <div class="card-glass accent-pink">
+              <span class="nav-tag" style="margin-bottom: 12px; display: inline-block;">Pediatricians & Healthcare</span>
+              <h3 style="font-size: 19px; color: #fff; margin-bottom: 10px;">"Clinical efficacy. Clean vehicle."</h3>
+              <p style="color: var(--kf-text-secondary); font-size: 13.5px; margin-bottom: 16px;">
+                "Formulated to strict WHO/AAP electrolyte standards and USP active ingredient benchmarks. Removes artificial colors and sweeteners to optimize gastrointestinal tolerance and compliance."
+              </p>
+              <button class="btn-pill btn-ghost" data-copy="Formulated to strict WHO/AAP electrolyte standards and USP active ingredient benchmarks. Removes artificial colors and sweeteners to optimize gastrointestinal tolerance and compliance." style="width: 100%; justify-content: center;">Copy Pitch</button>
+            </div>
+
+            <div class="card-glass">
+              <span class="nav-tag" style="margin-bottom: 12px; display: inline-block;">Retailers & Buyers (Target, Walmart, CVS)</span>
+              <h3 style="font-size: 19px; color: #fff; margin-bottom: 10px;">"Category expansion & basket incrementality."</h3>
+              <p style="color: var(--kf-text-secondary); font-size: 13.5px; margin-bottom: 16px;">
+                "Captures the high-value millennial parent seeking clean alternatives in the OTC and hydration aisles, driving premium basket sizes and margin growth across mass and pharmacy retail."
+              </p>
+              <button class="btn-pill btn-ghost" data-copy="Captures the high-value millennial parent seeking clean alternatives in the OTC and hydration aisles, driving premium basket sizes and margin growth across mass and pharmacy retail." style="width: 100%; justify-content: center;">Copy Pitch</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION 09: VOICE & TONE SIMULATOR ── -->
+        <section class="brand-section" id="section-voice">
+          <div class="section-head">
+            <span class="section-num-tag">09 · Voice & Tone</span>
+            <h2 class="section-title">Brand Voice & Stress-Level Simulator</h2>
+            <p class="section-desc">The core verbal filter: <em>"Does this add calm, clarity, or comfort — or does it add noise?"</em> Adjust the slider to see how the tone flexes by situational stress.</p>
+          </div>
+
+          <div class="tone-slider-wrap">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--kf-text-muted);">High Stress (Fever / Sick Child)</span>
+              <span style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--kf-blue-light);">Playful (Daily Hydration / Play)</span>
+            </div>
+            <input type="range" id="toneSlider" class="tone-range" min="0" max="4" value="0">
+            
+            <div style="background: rgba(0,0,0,0.3); border-radius: var(--kf-radius-md); padding: 20px; border: 1px solid var(--kf-border-subtle);">
+              <h4 id="toneContextLabel" style="font-size: 17px; color: #fff; margin-bottom: 6px;">High Stress (3am Sick Child / Fever)</h4>
+              <p id="toneContextDesc" style="font-size: 13.5px; color: var(--kf-text-muted); margin-bottom: 14px;">Minimal, steady, reassuring. Short sentences, zero flourish, immediate dosing clarity.</p>
+              <div id="toneExampleCopy" style="font-family: var(--font-serif); font-size: 18px; color: #82b1ff; line-height: 1.5;">
+                “We know that midnight fever feeling. The same active ingredient pediatricians recommend. Nothing unnecessary.”
+              </div>
+            </div>
+          </div>
+
+          <!-- Word Bank -->
+          <div class="grid-2" style="margin-top: 24px;">
+            <div class="card-glass">
+              <h4 style="color: var(--kf-success); font-size: 14px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">✓ Words We Use</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">Less</span>
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">Calm</span>
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">Simple</span>
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">Clean-label</span>
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">Effective</span>
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">Gentle</span>
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">No artificial dyes</span>
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">WHO/AAP standards</span>
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">Physician-formulated</span>
+                <span class="nav-tag" style="color: #fff; background: rgba(16,185,129,0.15);">Breathe</span>
+              </div>
+            </div>
+
+            <div class="card-glass">
+              <h4 style="color: var(--kf-error); font-size: 14px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">✗ Words We Avoid</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <span class="nav-tag" style="color: #f87171; background: rgba(239,68,68,0.15);">Miracle cure</span>
+                <span class="nav-tag" style="color: #f87171; background: rgba(239,68,68,0.15);">Super-duper</span>
+                <span class="nav-tag" style="color: #f87171; background: rgba(239,68,68,0.15);">Guaranteed fast!</span>
+                <span class="nav-tag" style="color: #f87171; background: rgba(239,68,68,0.15);">Chemical-free</span>
+                <span class="nav-tag" style="color: #f87171; background: rgba(239,68,68,0.15);">Toxin cleanser</span>
+                <span class="nav-tag" style="color: #f87171; background: rgba(239,68,68,0.15);">Pharma-grade potency</span>
+                <span class="nav-tag" style="color: #f87171; background: rgba(239,68,68,0.15);">All-natural magic</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION 10: BRAND GUIDELINES & GOVERNANCE ── -->
+        <section class="brand-section" id="section-guidelines">
+          <div class="section-head">
+            <span class="section-num-tag">10 · Governance</span>
+            <h2 class="section-title">Brand Rules, Dos & Don’ts</h2>
+            <p class="section-desc">Strict design and communication guardrails to preserve monolithic brand equity across digital, physical packaging, and retail channels.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card-glass" style="border-left: 4px solid var(--kf-success);">
+              <h3 style="color: var(--kf-success); font-size: 18px; margin-bottom: 14px;">The DOs</h3>
+              <ul style="color: var(--kf-text-secondary); font-size: 14px; padding-left: 20px; line-height: 1.8;">
+                <li>Always use the unified monolithic <strong>KinderFarms®</strong> wordmark as the primary anchor.</li>
+                <li>Ensure clear space around the logotype equal to the height of the capital letter "K".</li>
+                <li>Highlight functional benefits (e.g., "0% Artificial Dyes", "WHO/AAP ORS") with clean pill badges.</li>
+                <li>Maintain high contrast ratios (minimum 4.5:1) for all clinical dosing copy.</li>
+                <li>Use photography featuring authentic, candid, warm parent-child interactions.</li>
+              </ul>
+            </div>
+
+            <div class="card-glass" style="border-left: 4px solid var(--kf-error);">
+              <h3 style="color: var(--kf-error); font-size: 18px; margin-bottom: 14px;">The DON'Ts</h3>
+              <ul style="color: var(--kf-text-secondary); font-size: 14px; padding-left: 20px; line-height: 1.8;">
+                <li>Never create new sub-brands or append standalone logos (e.g. No "KinderCare", "KinderPop").</li>
+                <li>Never alter the official brand colors or create gradient text across primary headlines.</li>
+                <li>Never use fear-based marketing, panic triggers, or alarmist imagery of screaming infants.</li>
+                <li>Never claim products are "100% chemical-free" (water is a chemical; accuracy matters).</li>
+                <li>Never compress, distort, or rotate the master wordmark.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── SECTION 11: ASSET VAULT & TOKEN EXPORTER ── -->
+        <section class="brand-section" id="section-vault">
+          <div class="section-head">
+            <span class="section-num-tag">11 · Export Hub</span>
+            <h2 class="section-title">Asset Vault & Design Token Exporter</h2>
+            <p class="section-desc">Generate and export design tokens in production-ready CSS Custom Properties, Tailwind CSS configuration, or JSON formats.</p>
+          </div>
+
+          <div class="card-glass">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 13px; font-weight: 700; color: #fff;">Select Output Format:</span>
+                <select id="exportFormatSelect" class="sandbox-input" style="width: 160px; cursor: pointer; padding: 6px 12px;">
+                  <option value="css">CSS Variables</option>
+                  <option value="tailwind">Tailwind Config</option>
+                  <option value="json">JSON Tokens</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="code-box">
+              <button class="btn-copy-code">Copy</button>
+              <pre><code id="exportCodeOutput">:root {
+  /* KinderFarms Brand Tokens */
+  --kf-blue: #1A6DFF;
+  --kf-pink: #D11994;
+  --kf-deep-navy: #171445;
+  --kf-onyx: #0E1320;
+  
+  /* Flavor Accents */
+  --kf-strawberry: #E3424A;
+  --kf-citrus: #F58A1F;
+  --kf-berry: #7B2CBF;
+  --kf-lemonade: #F7C948;
+  --kf-watermelon: #F04C6B;
+}</code></pre>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

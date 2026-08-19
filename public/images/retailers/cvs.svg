@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <text x="5" y="44" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="42" fill="#CC0000" letter-spacing="2">CVS</text>
+  <path d="M120 22 C120 16 128 14 134 19 C140 14 148 16 148 22 C148 30 134 40 134 40 C134 40 120 30 120 22 Z" fill="#CC0000"/>
+  <text x="156" y="38" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="16" fill="#CC0000">Pharmacy</text>
+</svg>

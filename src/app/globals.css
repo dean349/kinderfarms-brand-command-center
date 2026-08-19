@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* KinderFarms Canvas & Surfaces (Clean, Warm, Honest) */
+  --bg: #FFFFFF;
+  --surface: #F6F6F6;
+  --surface-warm: #F9F7F4;
+  --surface-tint: #FDF0E4;
+
+  /* Dark Chrome (Header, Footer, Contrast Blocks) */
+  --dark-header: #0E1320;
+  --dark-footer: #0E1320;
+  --dark-navy: #171445;
+
+  /* Typography & Text */
+  --fg: #444749;
+  --fg-heading: #171445;
+  --fg-muted: #767676;
+  --border: #ECECEC;
+  --border-subtle: #E2E8F0;
+
+  /* Primary Brand Accents */
+  --accent-pink: #D11994;
+  --accent-blue: #1A6DFF;
+  --accent-leaf: #3E9B57;
+
+  /* 8-Flavor Seed Tokens */
+  --kf-strawberry: #E8416F;
+  --kf-cherry: #D6443F;
+  --kf-citrus: #F27A1A;
+  --kf-lemon: #F2C14E;
+  --kf-berry: #8B5CBF;
+  --kf-raspberry: #C13584;
+  --kf-watermelon: #F57E9E;
+  --kf-tropical: #F0A93B;
+
+  /* Brand Layout Standards */
+  --container-max: 1600px;
+  --container-padding: 30px;
+  --btn-height: 55px;
+  --btn-radius: 4px;
+}
+
+body {
+  background-color: #F9F7F4;
+  color: #444749;
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F9F7F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
