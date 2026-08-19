@@ -2,23 +2,51 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import { UploadCloud, FileText, CheckCircle2, Download, Copy, Database, RefreshCw, Server } from "lucide-react";
+import { UploadCloud, FileText, CheckCircle2, Download, Copy, Database, RefreshCw, Server, Lock } from "lucide-react";
 import { BRAND_COLORS } from "@/lib/tokens";
-import { fetchLiveSkus, DbSkuItem } from "@/lib/supabase";
+import { createClient } from "@/lib/supabase-client";
 
 export default function AssetVault() {
   const [uploadedFiles, setUploadedFiles] = useState<Array<{ name: string; size: number; status: string }>>([]);
   const [exportFormat, setExportFormat] = useState<"css" | "tailwind" | "json">("css");
   const [copied, setCopied] = useState(false);
-  const [liveSkus, setLiveSkus] = useState<DbSkuItem[]>([]);
+  const [liveSkus, setLiveSkus] = useState<any[]>([]);
   const [loadingDb, setLoadingDb] = useState(false);
   const [dbConnected, setDbConnected] = useState(true);
+  const [isAdminUser, setIsAdminUser] = useState(false);
+
+  useEffect(() => {
+    const checkProfile = async () => {
+      try {
+        const supabase = createClient();
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        if (user) {
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("role")
+            .eq("id", user.id)
+            .single();
+          setIsAdminUser(profile?.role === "admin");
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    checkProfile();
+  }, []);
 
   const loadSupabaseData = async () => {
     setLoadingDb(true);
     try {
-      const data = await fetchLiveSkus();
-      setLiveSkus(data);
+      const supabase = createClient();
+      const { data, error } = await supabase
+        .from("kf_sku_catalog")
+        .select("*")
+        .order("sku", { ascending: true });
+      if (error) throw error;
+      setLiveSkus(data || []);
       setDbConnected(true);
     } catch (e) {
       console.error(e);
@@ -113,21 +141,33 @@ export default function AssetVault() {
               Drag & drop PDFs, packaging dielines, or brand guides. Files are staged for authenticated Supabase CDN edge-caching and vector embedding for semantic search.
             </p>
 
-            <div
-              {...getRootProps()}
-              className={`p-8 rounded-[4px] border-2 border-dashed transition-all cursor-pointer flex flex-col items-center justify-center text-center ${
-                isDragActive
-                  ? "border-[#1A6DFF] bg-[#1A6DFF]/10"
-                  : "border-[#ECECEC] bg-[#F9F7F4] hover:border-[#1A6DFF]"
-              }`}
-            >
-              <input {...getInputProps()} />
-              <UploadCloud className="w-8 h-8 text-[#767676] mb-2" />
-              <p className="text-xs font-semibold text-[#171445]">
-                Drag and drop asset files here, or <span className="text-[#1A6DFF]">browse files</span>
-              </p>
-              <p className="text-[10px] text-[#767676] mt-1">Supports PDF, PNG, SVG, AI, CSV</p>
-            </div>
+            {isAdminUser ? (
+              <div
+                {...getRootProps()}
+                className={`p-8 rounded-[4px] border-2 border-dashed transition-all cursor-pointer flex flex-col items-center justify-center text-center ${
+                  isDragActive
+                    ? "border-[#1A6DFF] bg-[#1A6DFF]/10"
+                    : "border-[#ECECEC] bg-[#F9F7F4] hover:border-[#1A6DFF]"
+                }`}
+              >
+                <input {...getInputProps()} />
+                <UploadCloud className="w-8 h-8 text-[#767676] mb-2" />
+                <p className="text-xs font-semibold text-[#171445]">
+                  Drag and drop asset files here, or <span className="text-[#1A6DFF]">browse files</span>
+                </p>
+                <p className="text-[10px] text-[#767676] mt-1">Supports PDF, PNG, SVG, AI, CSV</p>
+              </div>
+            ) : (
+              <div className="p-8 rounded-[4px] border-2 border-dashed border-[#ECECEC] bg-[#F9F7F4] flex flex-col items-center justify-center text-center">
+                <Lock className="w-8 h-8 text-[#767676] mb-2" />
+                <p className="text-xs font-semibold text-[#171445]">
+                  Read-Only Access
+                </p>
+                <p className="text-[10px] text-[#767676] mt-1">
+                  Asset uploads are restricted to Administrators only.
+                </p>
+              </div>
+            )}
 
             {uploadedFiles.length > 0 && (
               <div className="mt-4 space-y-2">
