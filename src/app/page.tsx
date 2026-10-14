@@ -58,7 +58,7 @@ export default function Home() {
               KinderFarms® Command Center v2.0 • "Kids Deserve Less"
             </div>
             <div>
-              Built on Next.js 14, Tailwind, Three.js & Supabase Ingestion
+              Built on Next.js 14, Tailwind, Three.js & Client-Side Design Tokens
             </div>
           </footer>
         </div>

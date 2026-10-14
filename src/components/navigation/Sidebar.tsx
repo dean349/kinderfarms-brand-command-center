@@ -41,7 +41,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "08", label: "08. Messaging & Campaigns", sectionId: "section-messaging", icon: MessageSquare },
   { id: "09", label: "09. Situational Voice & Tone", sectionId: "section-tone", icon: Volume2 },
   { id: "10", label: "10. Brand Governance (DOs/DON'Ts)", sectionId: "section-governance", icon: FileCode },
-  { id: "11", label: "11. Supabase Asset Vault", sectionId: "section-vault", icon: Database },
+  { id: "11", label: "11. Brand Asset Vault", sectionId: "section-vault", icon: Database },
 ];
 
 export default function Sidebar() {

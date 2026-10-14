@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "KinderFarms® Brand Command Center | Master Brand Intelligence",
-  description: "Next.js SaaS Brand Command Center for KinderFarms master brand architecture, 8-flavor seed design tokens, 3D packaging simulation, and Supabase Asset Vault.",
+  description: "Next.js SaaS Brand Command Center for KinderFarms master brand architecture, 8-flavor seed design tokens, 3D packaging simulation, and Brand Asset Vault.",
 };
 
 export default function RootLayout({

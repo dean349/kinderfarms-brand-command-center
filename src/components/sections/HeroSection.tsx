@@ -58,7 +58,7 @@ export default function HeroSection() {
               onClick={() => scrollTo("section-vault")}
               className="h-[55px] px-8 bg-white hover:bg-[#F6F6F6] text-[#171445] font-sans font-semibold text-sm tracking-wider uppercase rounded-[4px] border border-[#ECECEC] shadow-sm transition-all active:scale-95 flex items-center gap-2"
             >
-              <span>Supabase Vault</span>
+              <span>Asset Vault</span>
             </button>
           </div>
         </div>
